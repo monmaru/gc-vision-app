@@ -1,2 +1,4 @@
 runtime: nodejs
 vm: true
+env_variables:
+  VISION_API_KEY: ''
