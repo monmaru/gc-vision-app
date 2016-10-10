@@ -1,5 +1,6 @@
 'use strict';
 var request = require('request');
+var logging = require('../logging');
 var express = require('express');
 var router = express.Router();
 
@@ -28,9 +29,10 @@ router.post('/vision', function(req, res) {
 
   request.post(params, function(error, response, body) {
     if (!error && response.statusCode == 200) {
+      logging.info('API call was successful.');
       res.status(200).json(body.responses)
     } else {
-      console.log(error);
+      logging.error(body);
       res.status(500).json({ status: 'err' })
     }
   });

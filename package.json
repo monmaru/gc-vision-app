@@ -15,9 +15,13 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@google/cloud-debug": "^0.8.5",
+    "@google/cloud-trace": "^0.5.8",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "request": "^2.75.0"
+    "express-winston": "^2.0.0",
+    "request": "^2.75.0",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "webpack": "^1.13.2"
