@@ -6,8 +6,8 @@ $(function() {
 
 function onFileChanged(e) {
   var file = e.target.files[0];
-  $('#analysis-result').remove();
-  
+  resetAnalysisResult();
+
   if (file) {
     readImage(file);
   } else {
@@ -27,6 +27,10 @@ function resetImage() {
   $('#image').attr('src', '');
 }
 
+function resetAnalysisResult() {
+  $('#analysis-result').remove();
+}
+
 function onAnalyzeClicked() {
   var encodedFile = $('#image').attr('src');
   if (!encodedFile || encodedFile === '') {
@@ -38,6 +42,7 @@ function onAnalyzeClicked() {
 
 function analyze(encodedFile) {
   var $loading = $('#loading');
+  resetAnalysisResult();
   $loading.show();
 
   var onSuccess = function(data, textStatus, jqXHR) {
