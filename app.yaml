@@ -1,6 +1,6 @@
 runtime: nodejs
 vm: true
 skip_files:
- - ^node_modules$
+  - ^node_modules$
 env_variables:
   VISION_API_KEY: ''

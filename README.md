@@ -18,7 +18,7 @@ export VISION_API_KEY=YOUR_API_KEY
 node app
 ```
 
-## Goolge App Engineへのデプロイ
+## Google App Engineへのデプロイ
 
 1. 事前準備  
 Google Cloud SDKのインストールや設定は済ませておいてください。
