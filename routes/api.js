@@ -30,10 +30,10 @@ router.post('/vision', function(req, res) {
   request.post(params, function(error, response, body) {
     if (!error && response.statusCode == 200) {
       logging.info('API call was successful.');
-      res.status(200).json(body.responses)
+      res.status(200).json(body.responses);
     } else {
       logging.error(body);
-      res.status(500).json({ status: 'err' })
+      res.status(500).json({ status: 'err' });
     }
   });
 });

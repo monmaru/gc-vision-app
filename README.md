@@ -23,10 +23,10 @@ node app
 1. 事前準備  
 Google Cloud SDKのインストールや設定は済ませておいてください。
 
-1. 設定ファイルの修正  
+2. 設定ファイルの修正  
 app.yamlのVISION_API_KEYに自身のキーを設定してください。
 
-2. デプロイコマンド実行
+3. デプロイコマンド実行
 ```
 gcloud app deploy
 ```
