@@ -5,6 +5,8 @@
   "main": "app.js",
   "private": true,
   "scripts": {
+    "bundle": "webpack --config webpack.config.js",
+    "prestart": "npm run bundle",
     "start": "node app.js",
     "monitor": "nodemon app.js",
     "deploy": "gcloud app deploy"
@@ -21,9 +23,7 @@
     "express": "^4.14.0",
     "express-winston": "^2.0.0",
     "request": "^2.75.0",
+    "webpack": "^1.13.2",
     "winston": "^2.2.0"
-  },
-  "devDependencies": {
-    "webpack": "^1.13.2"
   }
 }
