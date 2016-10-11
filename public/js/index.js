@@ -54,12 +54,16 @@ function analyze(encodedFile) {
   }).always(function() {
     $loading.hide();
   }).done(function(data, textStatus, jqXHR) {
-    var pre = $('<pre>').appendTo($('#result-container')).attr('id', 'analysis-result');
-    $('<code>').addClass('json').appendTo(pre).text(JSON.stringify(data, null, 2));
-    $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
-    });
+    showAnalysisResult(data);
   }).fail(function(jqXHR, textStatus, errorThrown) {
     alert('ERRORS: ' + textStatus + ' ' + errorThrown);
+  });
+}
+
+function showAnalysisResult(data) {
+  var pre = $('<pre>').appendTo($('#result-container')).attr('id', 'analysis-result');
+  $('<code>').addClass('json').appendTo(pre).text(JSON.stringify(data, null, 2));
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
   });
 }
