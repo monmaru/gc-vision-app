@@ -1,5 +1,8 @@
 'use strict';
+var hljs = require('highlight.js');
+
 $(function() {
+  hljs.initHighlightingOnLoad();
   $('#file').on('change', onFileChanged);
   $('#analyze').on('click', onAnalyzeClicked);
 });
